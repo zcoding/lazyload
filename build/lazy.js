@@ -1,3 +1,4 @@
+
 var Lazy = (function() {
 
   function Lazy() {};
@@ -5,3 +6,5 @@ var Lazy = (function() {
   return Lazy;
 
 })();
+
+

@@ -5,7 +5,9 @@
   "main": "entry.js",
   "scripts": {
     "start": "node scripts/server.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "build": "node_modules/.bin/uglifyjs build/lazy.js -o build/lazy.min.js --source-map build/lazy.min.map --source-map-url lazy.min.map -c -m",
+    "prebuild": "node scripts/concat.js"
   },
   "repository": {
     "type": "git",

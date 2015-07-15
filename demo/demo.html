@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>lazy</title>
+  </head>
+  <body>
+    <script src="../build/lazy.min.js"></script>
+    <script>
+    var assets = new Lazy(".lazy");
+    assets.load({
+      container: "#wrapper",
+      placeholder: "empty.jpg",
+      effect: "fadeIn",
+      onload: function() {
+        // one done
+      }
+    }).then(function(status) {
+      // all done, status === 'success'
+    });
+    </script>
+  </body>
+</html>
