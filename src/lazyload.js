@@ -58,7 +58,7 @@
     return window['pageYOffset'] || document.documentElement['scrollTop'];
   }
 
-  // 使用一个scroll监听，然后执行异步队列
+  // 使用一个scroll监听
   window.addEventListener('scroll', function() {
     var scrollTop = getScrollTop();
     loaders.forEach(function(loader) {
