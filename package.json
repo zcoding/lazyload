@@ -1,15 +1,12 @@
 {
-  "name": "spa-lazyload",
+  "name": "lazyload",
   "version": "0.0.1",
-  "description": "lazyload tool",
-  "main": "entry.js",
-  "scripts": {
-    "start": "node scripts/server.js",
-    "test": "node scripts/test.js"
-  },
+  "description": "images lazyload",
+  "main": "main.js",
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zcoding/spa-lazyload.git"
+    "url": "git+https://github.com/zcoding/lazyload.git"
   },
   "keywords": [
     "lazyload",
@@ -18,7 +15,7 @@
   "author": "zcoding",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zcoding/spa-lazyload/issues"
+    "url": "https://github.com/zcoding/lazyload/issues"
   },
-  "homepage": "https://github.com/zcoding/spa-lazyload#readme"
+  "homepage": "https://github.com/zcoding/lazyload#readme"
 }

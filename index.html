@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>lazyload</title>
+  <style>
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+  }
+  .images {
+    list-style-type: none;
+    width: 800px;
+    margin: 50px auto;
+    padding: 0;
+  }
+  .images:before, .images:after {
+    display: table;
+    content: '';
+  }
+  .images:after {
+    clear: both;
+  }
+  .images li {
+    list-style-type: none;
+    float: left;
+  }
+  .images a {
+    display: block;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+  }
+  .images img {
+    width: 100%;
+  }
+  img.lazy {
+    animation: fade 500ms;
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  </style>
+</head>
+<body>
+  <ul id="images" class="images">
+    <li>
+      <a href="javascript:;">
+        <img src="images/thumbnails/tibet-7.jpg" data-original="images/thumbnails/tibet-1.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;">
+        <img src="images/thumbnails/tibet-7.jpg" data-original="images/thumbnails/tibet-2.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;">
+        <img src="images/thumbnails/tibet-7.jpg" data-original="images/thumbnails/tibet-3.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;">
+        <img src="images/thumbnails/tibet-7.jpg" data-original="images/thumbnails/tibet-4.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;">
+        <img src="images/thumbnails/tibet-7.jpg" data-original="images/thumbnails/tibet-5.jpg" alt="">
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;">
+        <img src="images/thumbnails/tibet-7.jpg" data-original="images/thumbnails/tibet-6.jpg" alt="">
+      </a>
+    </li>
+  </ul>
+  <script src="lazyload.js"></script>
+  <script>
+  lazyload('img');
+  </script>
+</body>
+</html>
